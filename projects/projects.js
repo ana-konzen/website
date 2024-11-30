@@ -74,9 +74,9 @@ window.addEventListener("keydown", (ev) => {
 slideCont.addEventListener("wheel", (ev) => {
   if (slideCont.classList.contains("scrolling")) return;
   slideCont.classList.add("scrolling");
-  if (ev.deltaY > 2) {
+  if (ev.deltaY >= 2) {
     scrollDown();
-  } else if (ev.deltaY < -2) {
+  } else if (ev.deltaY <= -2) {
     scrollUp();
   }
   setTimeout(() => {
