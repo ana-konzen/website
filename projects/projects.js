@@ -44,12 +44,12 @@ if (
 document.addEventListener("mousemove", (event) => {
   const mouseY = event.clientY;
   if (
-    mouseY > slideCont.clientHeight - slideCont.clientHeight / 4 &&
+    mouseY > slideCont.clientHeight - slideCont.clientHeight / 3 &&
     currentSlide < slideCont.children.length - 1
   ) {
     slideCont.style.cursor = `url('${downCursor}'), auto`;
     slideCont.onclick = scrollDown;
-  } else if (mouseY < slideCont.clientHeight / 4 && currentSlide > 0) {
+  } else if (mouseY < slideCont.clientHeight / 3 && currentSlide > 0) {
     slideCont.style.cursor = `url('${upCursor}'), auto`;
     slideCont.onclick = scrollUp;
   } else {
