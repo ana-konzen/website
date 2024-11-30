@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Ana Konzen | Artifact</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="stylesheet" href="../styles.css">
+
+</head>
+
+<body>
+    <div class="menu">
+        <p><a class="button" href="../../index.html">(back)</a></p>
+    </div>
+    <div id="project-info">
+        <p class="name">Artifact</p>
+        <p class="label">made with</p>
+        <p>JavaScript,<br>OpenAI API,<br>RAG,<br>vector<br>embeddings</p>
+        <p class="label">date</p>
+        <p>Nov 2024</p>
+    </div>
+    <a href="https://arti-fact.deno.dev/" target="_blank">
+        <div class="demo-button">link to prototype</div>
+    </a>
+
+    <div class="slideCont">
+        <div class="slide column video">
+            <div class="video"><video src="videos/multiple.mp4" muted controls autoplay loop></div>
+
+            <div class="text">
+                <p>A platform that matches an uploaded artwork to similar artworks in museum collections, leveraging
+                    OpenAI Vision and a RAG model.</p>
+            </div>
+        </div>
+
+        <div class="slide row video">
+            <div class="text">
+                <p class="header">what it is</p>
+                <p>Artifact is a web platform that lets users upload an image of any artwork and displays similar
+                    paintings from the (for now) <a href="https://www.artic.edu/" target="_blank">Art Institute of
+                        Chicago’s</a> collection. It provides an easy way to explore related artworks based on
+                    style,
+                    composition, or subject.
+                </p><br><br>
+                <p class="header">how it works</p>
+                <p>Artifact is a RAG model. The museum’s entire collection* was scraped and analyzed using the <a
+                        href="https://api.artic.edu/docs/#quick-start" target="_blank">museum’s own data</a> and a
+                    combination of the Artsy and Wiki APIs. The data is then stored in a vector database and used
+                    for
+                    querying.</p>
+                <br><br>
+                <p class="header">conservative use of AI</p>
+                <p>The model could be easily scaled up using more museum APIs. The strings used for the embeddings
+                    are
+                    long enough for an accurate analysis, but short enough to be cost-effective. Each artwork
+                    analysis
+                    costs an average of 0.0012 cents to be embedded, meaning 100k artworks could be analyzed for a
+                    little over one dollar.
+                </p>
+            </div>
+            <div class="video">
+                <video src="videos/demo2.mp4" muted>
+            </div>
+        </div>
+        <div class="slide column">
+            <div class="text">
+                <p class="header">building the database</p>
+                <p>List all artworks in the Art Institute of Chicago’s collection, collect data about artworks using
+                    multiple APIs, create an embedding, and store in vector database (Pinecone).</p>
+            </div>
+            <div class="images">
+                <div class="schema"><img src="images/schema1.png"></div>
+            </div>
+        </div>
+        <div class="slide column">
+            <div class="text">
+                <p class="header">querying the database</p>
+                <p>In the main application, an image uploaded by the user is analyzed with OpenAI Vision to build an
+                    efficient query to fetch the 10 most similar artworks.</p>
+            </div>
+            <div class="images">
+                <div class="schema"><img src="images/schema2.png"></div>
+            </div>
+        </div>
+        <div class="slide column">
+            <div class="text">
+                <p class="header">performance analysis</p>
+                <p>The data from the artwork on the left was created with OpenAI Vision, while the artwork on the
+                    right
+                    is on the vector database, and its data was created by analyzing several APIs.</p>
+            </div>
+            <div class="images comparison">
+                <div><img src="images/cezanne.png">
+                    <p>*Subjects*: portrait, woman, seated figure, interior, chair, clothing, expression, human
+                        figure,
+                        muted colors, blue (color), green (color), red (color) *Classifications*: painting, oil on
+                        canvas, european
+                        painting *Terms*: oil painting, portrait, seated figure, interior scene, 19th century, muted
+                        colors, expression, human figure,
+                        blue, green, red *Medium*: Oil on canvas *Artist Genes*: Post-Impressionism, Figurative Art,
+                        Individual Portrait,
+                        Interior, Human Figure, Muted Palette *Genre*: portrait painting</p>
+                </div>
+                <div><img src="images/pascin.png">
+                    <p>*Subjects*: Century of Progress, world's fairs, Chicago World's Fairs, portraits, women;
+                        *Classifications*: painting, modern and contemporary art; *Terms*: painting, Century of
+                        Progress, modern and contemporary art, world's fairs, Chicago World's Fairs, portraits,
+                        women;
+                        *Medium*: Oil on canvas; *Artist Genes*: Modern, 1900 - 1917 Art, East European Art, Figure
+                        Studies, French Art, Gestural, Group Portrait, Human Figure, Individual Portrait, Nude, Oil
+                        Painting, Painting, Portrait, Post-Impressionism, Pre-World War II School of Paris, Rural
+                        Life,
+                        Scenes of Everyday Life ; *Movement*: Expressionism; *Genre*: portrait</p>
+                </div>
+            </div>
+        </div>
+        <div class="slide row">
+            <div class="text">
+                <p class="header">performance analysis</p>
+                <p>When inputting the an artwork that exists in the database, the match percentage is not perfect
+                    but it
+                    will always be one of the top matches.</p>
+            </div>
+            <div class="images">
+                <div class="mock"><img src="images/performance.png"></div>
+            </div>
+        </div>
+        <div class="slide row video">
+            <div class="text">
+                <p class="header">full demo</p>
+                <p><a href="https://arti-fact.deno.dev/" target="_blank" class="button">(link to prototype)</a></p>
+            </div>
+            <div class="video">
+                <video src="videos/demo.mp4" muted>
+            </div>
+        </div>
+    </div>
+
+    <div class="scrollBar"></div>
+
+
+    <script src="../projects.js" async defer></script>
+</body>
+
+</html>

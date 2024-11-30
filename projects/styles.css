@@ -1,0 +1,404 @@
+:root {
+  --white: white;
+  --black: black;
+  --slide-background: var(--white);
+  --text-color: var(--black);
+  --info-color: var(--black);
+  --transition: 0.5s;
+}
+
+#header {
+  transform: scale(0.8);
+  top: 95vh;
+  left: 0px;
+}
+
+.menu {
+  position: fixed;
+  left: 20px;
+  top: 20px;
+}
+
+.button {
+  text-align: right;
+  cursor: pointer;
+  font-size: 16px;
+  color: var(--text-color);
+  transition: color var(--transition);
+}
+
+#project-info {
+  position: fixed;
+  top: 20px;
+  right: 30px;
+  width: 150px;
+}
+
+.demo-button {
+  font-family: arizona sans;
+  position: fixed;
+  color: white;
+  background: rgba(0, 0, 0, 0.443);
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 30px;
+  text-align: center;
+  /* top: 160px; */
+  font-size: 14px;
+  right: 60px;
+  bottom: 60px;
+  backdrop-filter: blur(10px);
+}
+
+#project-info p {
+  text-align: right;
+  color: var(--info-color);
+  transition: color var(--transition);
+}
+
+#project-info .name {
+  font-weight: bold;
+  margin-bottom: -5px;
+}
+
+.label {
+  font-size: 10px;
+  font-weight: normal;
+  margin-bottom: 2px;
+  margin-top: 15px;
+}
+
+.slideCont {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.slide {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-evenly;
+  background-color: var(--slide-background);
+  transition: background-color var(--transition);
+}
+
+.slide.row {
+  flex-direction: row;
+}
+
+.slide.column {
+  flex-direction: column;
+}
+
+.slide div {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  flex: 1;
+}
+
+.slide.column .images {
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.slide.column .text {
+  flex-direction: column;
+}
+
+.slide.column .text .header {
+  margin-top: 50px;
+}
+
+.slide.row div {
+  flex-direction: column;
+}
+
+.slide div.text {
+  flex: 1;
+  /* width: 30%; */
+  padding: 20px;
+}
+
+.slide div.text p {
+  text-align: left;
+  max-width: 300px;
+  line-height: 1.2;
+  color: var(--text-color);
+  transition: color var(--transition);
+}
+
+.slide div.text .header {
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.slide.row div.text {
+  justify-content: center;
+}
+
+.slide div.images div img {
+  position: relative;
+  object-fit: cover;
+  height: 100%;
+  max-width: 100%;
+}
+
+.slide div.images div {
+  position: relative;
+  display: flex;
+  flex: 1;
+  margin: 10px;
+}
+
+.slide.column div.images div {
+  height: 100%;
+}
+
+.slide.row div.images div {
+  width: 100%;
+}
+
+.slide.column div.images {
+  flex: 5;
+  justify-content: center;
+}
+
+.slide.row div.images {
+  flex: 3;
+  align-content: center;
+  align-items: center;
+}
+
+.slide.row div.images .half {
+  width: 100%;
+  height: 50%;
+}
+
+.slide.column div.images .half {
+  max-width: 50%;
+}
+
+.slide.column div.images .sixty {
+  width: 60%;
+}
+
+.slide.row div.images .sixty {
+  height: 60%;
+}
+
+.slide.row div.images .third {
+  height: 33%;
+}
+
+.slide.row div.images .small {
+  width: 70%;
+  /* background: red; */
+  padding-top: 40px;
+}
+
+.slide.row div.images .small img {
+  object-fit: scale-down;
+}
+
+.slide.row div.images .fit img {
+  object-fit: contain;
+}
+
+.slide.row div.images .big {
+  flex: 3;
+}
+
+.slide.column.equal div.images {
+  width: 100%;
+  flex: 1;
+  overflow: hidden;
+  align-items: baseline;
+}
+
+.slide.column.equal div.images div {
+  margin: 20px;
+  margin-top: 200px;
+  flex-direction: column;
+  height: 100%;
+}
+
+.slide.column.equal div.images div p {
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  max-width: 200px;
+  margin-left: 20px;
+  color: var(--text-color);
+  transition: color var(--transition);
+}
+
+.slide.column.equal div.images div img {
+  width: 100%;
+  height: auto;
+  object-fit: fill;
+}
+
+.slide.row.video div.video {
+  flex: 3;
+  display: flex;
+  justify-content: center;
+}
+
+.slide.row.video div.video video {
+  width: 90%;
+}
+
+.slide.column.video div.video {
+  flex: 5;
+  display: flex;
+  justify-content: center;
+}
+
+.slide.column.video div.video video {
+  width: 100%;
+}
+
+.slide.full img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slide.full div.images div {
+  margin: 0;
+  height: 100%;
+}
+
+.slide.full div.images div img {
+  height: 100%;
+}
+
+.slide.column div.images.full div img {
+  width: 100%;
+}
+.scrollBar {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+.scrollBar .dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  margin: 2px;
+  padding: 0;
+  opacity: 0.8;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color var(--transition), width var(--transition), height var(--transition);
+}
+
+.scrollBar .dot::after {
+  content: "";
+  display: block;
+  width: 6px;
+  margin: 0;
+  cursor: pointer;
+  height: 6px;
+  border-radius: 50%;
+  transition: background-color var(--transition), width var(--transition), height var(--transition);
+  background-color: var(--info-color);
+}
+
+.scrollBar .dot:hover::after {
+  width: 10px;
+  height: 10px;
+}
+
+.scrollBar .dot.active::after {
+  width: 12px;
+  height: 12px;
+}
+
+#credit {
+  text-align: right;
+  right: 20px;
+}
+
+.slide.column div.images div.schema {
+  height: 80%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.slide.column div.images div.schema img {
+  object-fit: contain;
+}
+
+.slide.row div.images div.schema {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.slide.row div.images div.schema img {
+  object-fit: contain;
+  width: 80%;
+}
+
+.slide.row div.images div.mock {
+  display: flex;
+  justify-content: center;
+  width: 90%;
+}
+
+.slide.row div.images div.mock img {
+  object-fit: contain;
+}
+
+.slide.column div.comparison {
+  display: flex;
+  flex-flow: row;
+  position: relative;
+  justify-content: center;
+  justify-items: center;
+  width: 90%;
+  flex: 4;
+}
+
+.slide.column div.comparison div {
+  display: flex;
+  flex-direction: row;
+  align-items: left;
+  justify-items: left;
+  height: 90%;
+}
+
+.slide.column div.comparison div p {
+  text-align: left;
+  flex: 1;
+  margin-left: 20px;
+  max-width: 40%;
+  color: var(--text-color);
+  transition: color var(--transition);
+}
+
+.slide.column div.comparison div img {
+  position: relative;
+  flex: 1;
+  width: 50%;
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>MALBA Logo Generator</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://use.typekit.net/wzz8kxw.css">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>  
+        <div id="menu">
+       <img id="logo" src="malba-logo.png">
+            <div id="backgroundOptions" class="menuCont">
+                <button id="colorful" class="backgroundOption"></button>
+                <button id="black" class="backgroundOption"></button>
+            </div>
+            <div class="menuCont">
+                <button id="position">randomize</button>
+            </div>
+        </div>
+
+        <div id="logoCont">
+            <img id="backgroundImage" src="backgrounds/tarsila.jpg"/>
+        </div>
+
+        <svg id="mySVG"><defs><clipPath id="mask"></clipPath></defs></svg>
+
+        <script src="script.js" async defer></script>
+        <script src="menu.js" async defer></script>
+    </body>
+</html>

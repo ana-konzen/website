@@ -1,0 +1,134 @@
+:root {
+    --cell-height: 90px;
+  }
+
+  #logo {
+   
+    width: 180px;
+    margin-bottom: 40px;
+
+  }
+
+#logoCont {
+    position: fixed;
+    width: 400px;
+    height: 400px;
+    left: 50vw;
+    top: 100px;
+    transform: translate(-50%, 0);
+}
+
+.cell {
+    position: absolute;
+    box-sizing: border-box;
+    height: var(--cell-height);
+    border-radius: calc(var(--cell-height) / 2);  
+    transform-origin:calc(var(--cell-height) / 2) calc(var(--cell-height) / 2);
+}
+
+.letter {
+    font-family: "latino-gothic-variable", sans-serif;
+    font-variation-settings: "slnt" 1, "wdth" 70, "wght" 70; 
+    font-size: calc(var(--cell-height) - 15px);
+    text-align: center;
+    line-height: 90px;
+    box-sizing: border-box;
+    position: absolute;
+    width: var(--cell-height);
+    height: var(--cell-height);
+    border-radius: calc(var(--cell-height) / 2);
+    left: 0px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+#backgroundImage {
+    position: absolute;
+    width: 600px;
+    display: none;
+    clip-path: url(#mask);
+}
+
+.backgroundOption {
+    border: none;
+    box-sizing: border-box;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin: 2px;
+
+}
+
+.backgroundOption:hover {
+   opacity: 0.7;
+}
+
+#backgroundOptions {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+
+    width: 180px;
+    justify-content: center;
+    padding: 10px;
+}
+
+.menuCont {
+    width: 180px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+justify-items: center;
+align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+#menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    width: 200px;
+    position: fixed;
+    top: 100px;
+    left: 50px;
+    /* background: black; */
+
+}
+
+#black {
+    background: black;
+}
+
+#colorful {
+    background: linear-gradient(
+        to right,
+        #AF3034 20%,
+        #EEBE46 20% 40%,
+        #036848 40% 60%,
+        #2B3C7E 60% 80%,
+        #6CA8D9 80%
+      );
+}
+
+  #position {
+    font-family: "latino-gothic-variable", sans-serif;
+    font-variation-settings: "slnt" 1, "wdth" 70, "wght" 40; 
+    padding: 8px 2px;
+    width: 100px;
+    font-size: 16px;
+    text-align: center;
+    border-radius: 20px;
+    cursor: pointer;
+    border: none;
+    color: white;
+    position: relative;
+    background: black;
+
+  }
