@@ -110,6 +110,10 @@ function scroll(behavior = "smooth") {
 document.addEventListener("visibilitychange", () => {
   if (document.hidden) {
     pauseVideos();
+  } else {
+    if (slideCont.children[currentSlide].classList.contains("video")) {
+      slideCont.children[currentSlide].querySelector("video").play();
+    }
   }
 });
 

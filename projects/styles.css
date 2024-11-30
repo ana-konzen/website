@@ -402,3 +402,13 @@
   flex: 1;
   width: 50%;
 }
+
+.slide.video div.fit {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+}
+
+.slide.video div.fit video {
+  height: 100%;
+}
