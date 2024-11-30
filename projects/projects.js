@@ -3,6 +3,9 @@ const scrollBar = document.querySelector(".scrollBar");
 
 let currentSlide = 0;
 
+let upCursor = "../../cursors/up.png";
+let downCursor = "../../cursors/down.png";
+
 for (let i = 0; i < slideCont.children.length; i++) {
   const dot = document.createElement("div");
   dot.classList.add("dot");
@@ -25,16 +28,29 @@ dots.forEach((dot, index) => {
   };
 });
 
+if (
+  slideCont.children[currentSlide].classList.contains("dark") ||
+  slideCont.children[currentSlide].classList.contains("image")
+) {
+  document.documentElement.style.setProperty("--info-color", "var(--white)");
+  if (slideCont.children[currentSlide].classList.contains("dark")) {
+    document.documentElement.style.setProperty("--slide-background", "var(--black)");
+    document.documentElement.style.setProperty("--text-color", "var(--white)");
+    upCursor = "../../cursors/up-white.png";
+    downCursor = "../../cursors/down-white.png";
+  }
+}
+
 document.addEventListener("mousemove", (event) => {
   const mouseY = event.clientY;
   if (
     mouseY > slideCont.clientHeight - slideCont.clientHeight / 4 &&
     currentSlide < slideCont.children.length - 1
   ) {
-    slideCont.style.cursor = "url('../../cursors/down.png'), auto";
+    slideCont.style.cursor = `url('${downCursor}'), auto`;
     slideCont.onclick = scrollDown;
   } else if (mouseY < slideCont.clientHeight / 4 && currentSlide > 0) {
-    slideCont.style.cursor = "url('../../cursors/up.png'), auto";
+    slideCont.style.cursor = `url('${upCursor}'), auto`;
     slideCont.onclick = scrollUp;
   } else {
     slideCont.style.cursor = "auto";
@@ -96,11 +112,15 @@ function scroll(behavior = "smooth") {
     if (slideCont.children[currentSlide].classList.contains("dark")) {
       document.documentElement.style.setProperty("--slide-background", "var(--black)");
       document.documentElement.style.setProperty("--text-color", "var(--white)");
+      upCursor = "../../cursors/up-white.png";
+      downCursor = "../../cursors/down-white.png";
     }
   } else {
     document.documentElement.style.setProperty("--info-color", "var(--black)");
     document.documentElement.style.setProperty("--slide-background", "var(--white)");
     document.documentElement.style.setProperty("--text-color", "var(--black)");
+    upCursor = "../../cursors/up.png";
+    downCursor = "../../cursors/down.png";
   }
   if (slideCont.children[currentSlide].classList.contains("video")) {
     slideCont.children[currentSlide].querySelector("video").play();
