@@ -40,10 +40,11 @@
   --margin: 5vw;
   --img-width: 90vw;
   --img-height: 90vw;
-  --img-bottom: var(--margin);
+  --img-bottom: auto;
+  --img-top: calc(var(--margin) + 60px);
   --img-left: 50vw;
   --bio-width: 90vw;
-  --bio-top: calc(var(--margin) + 60px);
+  --bio-top: calc(var(--img-top) + var(--img-height) + var(--margin));
   --bio-left: var(--margin);
   --credit-bottom: var(--margin);
   --credit-left: var(--margin);
@@ -54,7 +55,7 @@
   --list-top: var(--margin);
   --list-right: var(--margin);
   --list-bottom: auto;
-  --message-bottom: calc(var(--img-bottom) + var(--img-height) + 50px);
+  --message-top: var(--margin);
 }
 
 @media only screen and (min-width: 700px) {
@@ -62,6 +63,7 @@
     --img-width: 70vw;
     --img-height: 70vw;
     --img-bottom: 50vh;
+    --img-top: suto;
     --img-left: 50vw;
     --bio-width: 20vw;
     --bio-top: calc(var(--img-bottom) - var(--img-height) / 2 + 100px);

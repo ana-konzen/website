@@ -26,6 +26,7 @@ body {
   width: var(--img-width);
   height: var(--img-height);
   bottom: var(--img-bottom);
+  top: var(--img-top);
   left: var(--img-left);
   mix-blend-mode: multiply;
   transform: translateX(-50%);
@@ -106,8 +107,9 @@ p a:hover {
   font-weight: bold;
   font-size: 16px;
   text-align: center;
-  position: fixed;
-  bottom: var(--message-bottom);
+  position: relative;
+  top: var(--message-top);
   left: 50%;
   transform: translateX(-50%);
+  width: 80%;
 }
