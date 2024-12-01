@@ -19,7 +19,7 @@ let GIFInterval = setInterval(getRandomGIF, 5000);
 projects.forEach((project) => {
   const projectItem = document.createElement("div");
   projectItem.innerHTML = `<a href="./projects/${project.toLowerCase().split(" ").join("-")}">${project}</a>`;
-  if (project === "brushed" || project === "dungeon mystery") {
+  if (project === "dungeon mystery") {
     projectItem.innerHTML = `<a href="">${project}</a>`;
   }
   projectItem.classList.add("project-item");
