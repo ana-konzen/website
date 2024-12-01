@@ -6,9 +6,9 @@
   justify-items: center;
   align-content: center;
   flex: 1;
-  height: 80%;
+  height: 70%;
 }
 #klein video {
-  height: 80%;
+  height: 100%;
   object-fit: cover;
 }
