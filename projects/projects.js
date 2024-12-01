@@ -32,10 +32,12 @@ document.addEventListener(
     ev.preventDefault();
     if (isScrolling) return;
     isScrolling = true;
-    if (ev.deltaY > 1 && ev.deltaY < 20) {
+    if (ev.deltaY > 1) {
       scrollDown();
-    } else if (ev.deltaY < -1 && ev.deltaY > -20) {
+      console.log(ev.deltaY);
+    } else if (ev.deltaY < -1) {
       scrollUp();
+      console.log(ev.deltaY);
     }
 
     clearTimeout(scrollTimeout);
@@ -51,16 +53,11 @@ document.addEventListener("mousemove", (event) => {
 });
 
 window.addEventListener("keydown", (ev) => {
-  if (isScrolling) return;
-  isScrolling = true;
   if (ev.key === "ArrowDown") {
     scrollDown();
   } else if (ev.key === "ArrowUp") {
     scrollUp();
   }
-  setTimeout(() => {
-    isScrolling = false;
-  }, scrollTimer);
 });
 
 window.addEventListener("resize", () => {
