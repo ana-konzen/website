@@ -12,3 +12,22 @@
   height: 100%;
   object-fit: cover;
 }
+
+#duo {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+#duo div {
+  flex: 1;
+  height: 50%;
+}
+
+#duo div img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: cover;
+}
