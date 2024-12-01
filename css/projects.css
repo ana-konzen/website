@@ -21,44 +21,33 @@
 
 .button {
   text-align: right;
-  cursor: pointer;
   font-size: 16px;
   color: var(--text-color);
   transition: color var(--transition);
 }
 
-#project-info {
+.project-name {
   position: fixed;
-  top: 20px;
-  right: 30px;
-  width: 150px;
+  bottom: 20px;
+  left: 20px;
+  color: var(--text-color);
+  width: 200px;
+  height: 20px;
+  opacity: 1;
+  transition: opacity var(--transition);
 }
 
-.demo-button {
-  font-family: arizona sans;
-  position: fixed;
-  color: white;
-  background: rgba(0, 0, 0, 0.443);
-  cursor: pointer;
-  padding: 10px;
-  border-radius: 30px;
-  text-align: center;
-  /* top: 160px; */
-  font-size: 14px;
-  right: 60px;
-  bottom: 60px;
-  backdrop-filter: blur(10px);
+.project-name.first {
+  opacity: 0;
 }
 
-#project-info p {
-  text-align: right;
-  color: var(--info-color);
+.project-name p {
+  font-size: 16px;
+  font-weight: normal;
+  text-transform: uppercase;
+  text-align: left;
+  color: var(--text-color);
   transition: color var(--transition);
-}
-
-#project-info .name {
-  font-weight: bold;
-  margin-bottom: -5px;
 }
 
 .label {
@@ -66,6 +55,27 @@
   font-weight: normal;
   margin-bottom: 2px;
   margin-top: 15px;
+}
+
+div.demo-button {
+  font-family: arizona sans;
+  position: fixed;
+  color: white;
+  display: block;
+  background: rgba(0, 0, 0, 0.443);
+  border-radius: 30px;
+  text-align: center;
+  font-size: 14px;
+  right: 20px;
+  margin: 0;
+  top: 20px;
+  cursor: pointer;
+  height: 40px;
+  backdrop-filter: blur(10px);
+}
+
+div.demo-button:hover {
+  background: rgba(0, 0, 0, 0.6);
 }
 
 .slideCont {
@@ -98,8 +108,13 @@
 .slide div {
   position: relative;
   display: flex;
-  overflow: hidden;
+  /* overflow: hidden; */
   flex: 1;
+}
+
+.slide div.images {
+  order: 2;
+  overflow: hidden;
 }
 
 .slide.column .images {
@@ -120,9 +135,71 @@
 }
 
 .slide div.text {
+  z-index: 10;
+  order: 1;
   flex: 1;
-  /* width: 30%; */
+  overflow: auto;
   padding: 20px;
+}
+
+.slide div.text.main {
+  flex: 2;
+  flex-direction: row;
+  align-items: flex-end;
+  margin-bottom: 20px;
+  padding: 30px;
+}
+
+.slide div.text.main .title {
+  display: flex;
+  flex-direction: column;
+}
+.slide div.text.main .desc {
+  position: relative;
+}
+
+.slide div.text.main .desc p {
+  text-align: right;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.slide div.text.main .title .info {
+  display: flex;
+  flex-direction: row;
+}
+
+.slide div.text.main .title .info div {
+  display: block;
+  margin-right: 10px;
+}
+
+.slide div.text.main p {
+  font-size: 16px;
+  width: 100%;
+}
+
+.slide div.text.main div.title p.header {
+  font-weight: bold;
+  color: var(--text-color);
+  font-size: 60px;
+  max-width: 100%;
+  margin-bottom: 20px;
+  line-height: 70px;
+}
+
+.slide div.text.main p.header span.sub-header {
+  font-weight: bold;
+  font-size: 14px;
+  text-transform: none;
+}
+.slide div.text.bottom {
+  order: 2;
+}
+
+.slide div.text.right {
+  order: 2;
 }
 
 .slide div.text p {
@@ -143,18 +220,18 @@
   justify-content: center;
 }
 
-.slide div.images div img {
-  position: relative;
-  object-fit: cover;
-  height: 100%;
-  max-width: 100%;
-}
-
 .slide div.images div {
   position: relative;
   display: flex;
   flex: 1;
   margin: 10px;
+}
+
+.slide div.images div img {
+  position: relative;
+  object-fit: cover;
+  height: 100%;
+  max-width: 100%;
 }
 
 .slide.column div.images div {
@@ -198,21 +275,22 @@
 }
 
 .slide.row div.images .small {
-  width: 70%;
-  /* background: red; */
-  padding-top: 40px;
+  height: 30%;
+  flex: 1;
 }
 
 .slide.row div.images .small img {
   object-fit: scale-down;
 }
 
-.slide.row div.images .fit img {
+.slide.row div.images div.fit img {
   object-fit: contain;
+  height: 50%;
+  max-height: 100%;
 }
 
 .slide.row div.images .big {
-  flex: 3;
+  flex: 4;
 }
 
 .slide.column.equal div.images {
@@ -245,7 +323,8 @@
   object-fit: fill;
 }
 
-.slide.row.video div.video {
+.slide.video div.video {
+  order: 2;
   flex: 3;
   display: flex;
   justify-content: center;
@@ -280,9 +359,23 @@
   height: 100%;
 }
 
-.slide.column div.images.full div img {
-  width: 100%;
+.full-vertical {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  opacity: 1;
+  position: absolute;
+  top: 0;
+  z-index: 1;
 }
+
+.full-vertical img {
+  height: 100vh;
+  object-fit: cover;
+}
+
 .scrollBar {
   position: fixed;
   display: flex;

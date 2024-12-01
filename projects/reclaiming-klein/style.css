@@ -1,0 +1,14 @@
+#klein {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  align-content: center;
+  flex: 1;
+  height: 80%;
+}
+#klein video {
+  height: 80%;
+  object-fit: cover;
+}

@@ -1,0 +1,94 @@
+@font-face {
+  font-family: "arizona sans";
+  src: url("/fonts/ABCArizonaSans-Regular-Trial.otf");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "arizona sans";
+  src: url("/fonts/ABCArizonaSans-Bold-Trial.otf");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "arizona sans";
+  src: url("/fonts/ABCArizonaSans-Light-Trial.otf");
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: "arizona flare";
+  src: url("/fonts/ABCArizonaFlare-Light-Trial.otf");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "arizona flare";
+  src: url("/fonts/ABCArizonaFlare-LightItalic-Trial.otf");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "arizona flare";
+  src: url("/fonts/ABCArizonaFlare-Medium-Trial.otf");
+  font-weight: bold;
+}
+
+/* mobile first */
+:root {
+  --margin: 5vw;
+  --img-width: 90vw;
+  --img-height: 90vw;
+  --img-bottom: var(--margin);
+  --img-left: 50vw;
+  --bio-width: 90vw;
+  --bio-top: calc(var(--margin) + 60px);
+  --bio-left: var(--margin);
+  --credit-bottom: var(--margin);
+  --credit-left: var(--margin);
+  --header-top: 20px;
+  --header-left: var(--margin);
+  --list-width: 30vw;
+  --list-left: auto;
+  --list-top: var(--margin);
+  --list-right: var(--margin);
+  --list-bottom: auto;
+  --message-bottom: calc(var(--img-bottom) + var(--img-height) + 50px);
+}
+
+@media only screen and (min-width: 700px) {
+  :root {
+    --img-width: 70vw;
+    --img-height: 70vw;
+    --img-bottom: 50vh;
+    --img-left: 50vw;
+    --bio-width: 20vw;
+    --bio-top: calc(var(--img-bottom) - var(--img-height) / 2 + 100px);
+    --bio-left: var(--margin);
+    --credit-left: calc(var(--img-left) + var(--img-width) / 2 + var(--margin));
+    --credit-bottom: calc(var(--img-bottom) - var(--img-height) / 2);
+    --header-top: calc(var(--img-bottom) - var(--img-height) / 2);
+    --header-left: var(--margin);
+    --list-width: var(--bio-width);
+    --list-left: var(--margin);
+    --list-bottom: calc(var(--img-bottom) - var(--img-height) / 2);
+    --list-right: auto;
+    --list-top: auto;
+  }
+}
+
+@media screen and (orientation: landscape) {
+  :root {
+    --img-width: 80vh;
+    --img-height: 80vh;
+  }
+}
+
+@media only screen and (max-width: 1200px) and (min-width: 700px) {
+  :root {
+    --margin: 2vw;
+    --img-width: 50vw;
+    --img-height: 90vh;
+  }
+}

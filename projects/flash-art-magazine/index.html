@@ -12,8 +12,11 @@
     <link rel="icon" type="image/png" sizes="16x16" href="../../favicon/favicon-16x16.png">
     <link rel="manifest" href="../../favicon/site.webmanifest">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../../styles.css">
-    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../../css/defs.css">
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="../../css/main-desktop.css">
+    <link rel="stylesheet" href="../../css/projects.css">
+    <link rel="stylesheet" href="../../css/projects-desktop.css">
 
 </head>
 
@@ -21,30 +24,47 @@
     <div class="menu">
         <p><a class="button" href="../../">(back)</a></p>
     </div>
-    <div id="project-info">
-        <p class="name">Flash Art</p>
-        <p class="label">type</p>
-        <p>generative logo design</p>
-        <p class="label">made with</p>
-        <p>JavaScript,<br>OpenAI API,<br>p5.js, p5.brush.js</p>
-        <p class="label">date</p>
-        <p>Apr 2024</p>
+    <div class="project-name">
+        <p>Flash Art</p>
     </div>
     <a href="https://flash-art-logo.deno.dev/" target="_blank">
         <div class="demo-button">link to generator</div>
     </a>
 
     <div class="slideCont">
-        <div class="slide column">
-            <div class="images full">
+        <div class="slide full column">
+            <div class="images">
                 <div><img src="images/two.png"></div>
             </div>
-            <div class="text">
-                <p>A generative logo that simulates artist interventions over the magazine’s name, leveraging AI-driven
-                    analysis with a flexible design system.</p>
+            <div class="text bottom main">
+                <div class="title">
+                    <p class="header">Flash Art</p>
+                    <div class="info">
+                        <div>
+                            <p class="label">type</p>
+                            <p>lgenerative logo design</p>
+                        </div>
+                        <div>
+                            <p class="label">made with</p>
+                            <p>JavaScript, OpenAI API, p5.js, p5.brush.js</p>
+                        </div>
+                        <div>
+                            <p class="label">date</p>
+                            <p>April 2024</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="desc">
+                    <p>A generative logo that simulates artist interventions over the magazine’s name, leveraging
+                        AI-driven
+                        analysis with a flexible design system.</p>
+                </div>
             </div>
         </div>
         <div class="slide row">
+            <div class="images">
+                <div><img src="images/one.png"></div>
+            </div>
             <div class="text">
                 <p class="header">background</p>
                 <p>Flash Art is a quarterly magazine known for featuring emerging and avant-garde artists. It was
@@ -52,11 +72,7 @@
                     <br><br>
                     In its early years, Flash Art had a tradition of artists intervening by defacing the logo and front
                     cover.
-
                 </p>
-            </div>
-            <div class="images">
-                <div><img src="images/one.png"></div>
             </div>
         </div>
         <div class="slide row">
@@ -71,34 +87,37 @@
             </div>
         </div>
         <div class="slide row">
+            <div class="images">
+                <div class="schema"><img src="images/schema.png"></div>
+            </div>
             <div class="text">
                 <p class="header">process</p>
                 <p>An image of an artist’s work is analyzed by OpenAI Vision. The use of AI, paired with a flexible
                     design, offers a completely personalized logo for each issue of the magazine.</p>
             </div>
-            <div class="images">
-                <div class="schema"><img src="images/schema.png"></div>
-            </div>
         </div>
         <div class="slide column">
+            <div class="images">
+                <div class="schema"><img src="images/info2.png"></div>
+            </div>
             <div class="text">
                 <p class="header">an example analysis</p>
                 <p>The data from the AI is extensively processed to generate the final result. <br>The following is a
                     summary of some key points, although it does not represent the full extent of the analysis.</p>
             </div>
-            <div class="images">
-                <div class="schema"><img src="images/info2.png"></div>
-            </div>
         </div>
         <div class="slide column">
-            <div class="text">
-                <p class="header">an example analysis (continued)</p>
-            </div>
             <div class="images">
                 <div class="schema"><img src="images/info3.png"></div>
             </div>
+            <div class="text">
+                <p class="header">an example analysis (continued)</p>
+            </div>
         </div>
         <div class="slide row">
+            <div class="images">
+                <div class="schema"><img src="images/info4.png"></div>
+            </div>
             <div class="text">
                 <p class="header">usage</p>
                 <p>Each issue of the magazine features several artists that can be represented in the logo. To
@@ -107,11 +126,11 @@
                     layers, the original
                     logo becomes almost completely hidden.</p>
             </div>
-            <div class="images">
-                <div class="schema"><img src="images/info4.png"></div>
-            </div>
         </div>
         <div class="slide row video">
+            <div class="video">
+                <video src="videos/demo.mp4" muted>
+            </div>
             <div class="text">
                 <p class="header">generator</p>
                 <p>The logo has a custom generator with an artist database, so that it can be completely customized.
@@ -119,11 +138,11 @@
                     <a href="https://flash-art-logo.deno.dev/" target="_blank" class="button">(link to generator)</a>
                 </p>
             </div>
-            <div class="video">
-                <video src="videos/demo.mp4" muted>
-            </div>
         </div>
         <div class="slide row">
+            <div class="images">
+                <div class="schema"><img src="images/web.gif"></div>
+            </div>
             <div class="text">
                 <p class="header">usage: website</p>
                 <p>The stacked strategy is primarily used on the website, as a way to tease the upcoming issue.
@@ -136,17 +155,14 @@
                     on the logo.
                 </p>
             </div>
-            <div class="images">
-                <div class="schema"><img src="images/web.gif"></div>
-            </div>
         </div>
         <div class="slide row">
+            <div class="images">
+                <div class="schema"><img src="images/mock.png"></div>
+            </div>
             <div class="text">
                 <p class="header">usage: print</p>
                 <p>Several covers per issue, each focusing on a featured artist.</p>
-            </div>
-            <div class="images">
-                <div class="schema"><img src="images/mock.png"></div>
             </div>
         </div>
     </div>

@@ -12,8 +12,12 @@
     <link rel="icon" type="image/png" sizes="16x16" href="../../favicon/favicon-16x16.png">
     <link rel="manifest" href="../../favicon/site.webmanifest">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../../styles.css">
-    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../../css/defs.css">
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="../../css/main-desktop.css">
+    <link rel="stylesheet" href="../../css/projects.css">
+    <link rel="stylesheet" href="../../css/projects-desktop.css">
+    <link rel="stylesheet" href="style.css">
 
 </head>
 
@@ -21,26 +25,40 @@
     <div class="menu">
         <p><a class="button" href="../../">(back)</a></p>
     </div>
-    <div id="project-info">
-        <p class="name">Reclaiming Klein</p>
-        <p class="label">type</p>
-        <p>motion graphics</p>
-        <p class="label">made with</p>
-        <p>Cinema 4D,<br>motion capture,<br>AfterEffects</p>
-        <p class="label">date</p>
-        <p>May 2024</p>
+    <div class="project-name">
+        <p>Reclaiming Klein</p>
     </div>
 
+
     <div class="slideCont">
-        <div class="slide dark row video">
-            <div class="video">
+        <div class="slide video dark column">
+            <div class="video" id="klein">
                 <video src="videos/main.mp4" loop muted autoplay>
             </div>
-            <div class="text">
-                <p>A 3D rendering that reframes Yves Klein’s <i>Anthropometries</i> from the perspective of the women
-                    who made
-                    them.</p>
+            <div class="text bottom main">
+                <div class="title">
+                    <p class="header">Reclaiming Klein</p>
+                    <div class="info">
+                        <div>
+                            <p class="label">type</p>
+                            <p>motion graphics</p>
+                        </div>
+                        <div>
+                            <p class="label">made with</p>
+                            <p>Cinema 4D, motion capture, AfterEffects</p>
+                        </div>
+                        <div>
+                            <p class="label">date</p>
+                            <p>May 2024</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="desc">
+                    <p>A 3D rendering that reframes Yves Klein’s <i>Anthropometries</i> from the perspective of the
+                        women who made them.</p>
+                </div>
             </div>
+
         </div>
 
 
@@ -107,15 +125,15 @@
                 <div><img src="images/five.png"></div>
             </div>
         </div>
-        <div class="slide column video dark">
+        <div class="slide row video dark">
             <div class="video">
                 <video src="videos/klein.mp4" controls>
             </div>
             <div class="text">
                 <p class="header">final output</p>
                 <p>After rendering, I composed the result in After Effects and added <i>Monotone Symphony</i>.<br>The
-                    video
-                    is meant as a tool for contemplation. I haven’t added much content or exposition, only the word
+                    video is meant as a tool for contemplation. I haven’t added much content or exposition, only the
+                    word
                     “reclaiming” in the beginning.</p>
             </div>
         </div>

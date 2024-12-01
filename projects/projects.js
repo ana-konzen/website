@@ -1,12 +1,14 @@
 const slideCont = document.querySelector(".slideCont");
 const scrollBar = document.querySelector(".scrollBar");
+const infoCont = document.querySelector(".project-name");
+const slides = document.querySelectorAll(".slide");
 
 let currentSlide = 0;
 
 let upCursor = "../../cursors/up.png";
 let downCursor = "../../cursors/down.png";
 
-for (let i = 0; i < slideCont.children.length; i++) {
+for (let i = 0; i < slides.length; i++) {
   const dot = document.createElement("div");
   dot.classList.add("dot");
   scrollBar.appendChild(dot);
@@ -15,6 +17,12 @@ for (let i = 0; i < slideCont.children.length; i++) {
 window.onresize = () => {
   scroll("auto");
 };
+
+if (currentSlide === 0) {
+  infoCont.classList.add("first");
+} else {
+  infoCont.classList.remove("first");
+}
 
 const dots = document.querySelectorAll(".dot");
 
@@ -28,12 +36,9 @@ dots.forEach((dot, index) => {
   };
 });
 
-if (
-  slideCont.children[currentSlide].classList.contains("dark") ||
-  slideCont.children[currentSlide].classList.contains("image")
-) {
+if (slides[currentSlide].classList.contains("dark") || slides[currentSlide].classList.contains("image")) {
   document.documentElement.style.setProperty("--info-color", "var(--white)");
-  if (slideCont.children[currentSlide].classList.contains("dark")) {
+  if (slides[currentSlide].classList.contains("dark")) {
     document.documentElement.style.setProperty("--slide-background", "var(--black)");
     document.documentElement.style.setProperty("--text-color", "var(--white)");
     upCursor = "../../cursors/up-white.png";
@@ -43,10 +48,7 @@ if (
 
 document.addEventListener("mousemove", (event) => {
   const mouseY = event.clientY;
-  if (
-    mouseY > slideCont.clientHeight - slideCont.clientHeight / 3 &&
-    currentSlide < slideCont.children.length - 1
-  ) {
+  if (mouseY > slideCont.clientHeight - slideCont.clientHeight / 3 && currentSlide < slides.length - 1) {
     slideCont.style.cursor = `url('${downCursor}'), auto`;
     slideCont.onclick = scrollDown;
   } else if (mouseY < slideCont.clientHeight / 3 && currentSlide > 0) {
@@ -93,7 +95,7 @@ function scrollUp() {
 }
 
 function scrollDown() {
-  if (currentSlide < slideCont.children.length - 1) {
+  if (currentSlide < slides.length - 1) {
     dots[currentSlide].classList.remove("active");
     currentSlide++;
   }
@@ -102,14 +104,16 @@ function scrollDown() {
 
 function scroll(behavior = "smooth") {
   pauseVideos();
+  if (currentSlide === 0) {
+    infoCont.classList.add("first");
+  } else {
+    infoCont.classList.remove("first");
+  }
   dots[currentSlide].classList.add("active");
   slideCont.scrollTo({ top: slideCont.clientHeight * currentSlide, behavior: behavior });
-  if (
-    slideCont.children[currentSlide].classList.contains("dark") ||
-    slideCont.children[currentSlide].classList.contains("image")
-  ) {
+  if (slides[currentSlide].classList.contains("dark") || slides[currentSlide].classList.contains("image")) {
     document.documentElement.style.setProperty("--info-color", "var(--white)");
-    if (slideCont.children[currentSlide].classList.contains("dark")) {
+    if (slides[currentSlide].classList.contains("dark")) {
       document.documentElement.style.setProperty("--slide-background", "var(--black)");
       document.documentElement.style.setProperty("--text-color", "var(--white)");
       upCursor = "../../cursors/up-white.png";
@@ -122,8 +126,8 @@ function scroll(behavior = "smooth") {
     upCursor = "../../cursors/up.png";
     downCursor = "../../cursors/down.png";
   }
-  if (slideCont.children[currentSlide].classList.contains("video")) {
-    slideCont.children[currentSlide].querySelector("video").play();
+  if (slides[currentSlide].classList.contains("video")) {
+    slides[currentSlide].querySelector("video").play();
   }
 }
 
@@ -131,8 +135,8 @@ document.addEventListener("visibilitychange", () => {
   if (document.hidden) {
     pauseVideos();
   } else {
-    if (slideCont.children[currentSlide].classList.contains("video")) {
-      slideCont.children[currentSlide].querySelector("video").play();
+    if (slides[currentSlide].classList.contains("video")) {
+      slides[currentSlide].querySelector("video").play();
     }
   }
 });

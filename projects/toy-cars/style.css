@@ -1,0 +1,9 @@
+#cars-main {
+  display: block;
+}
+
+#cars-main .text {
+  position: absolute;
+  bottom: 0px;
+  width: 100vw;
+}

@@ -12,21 +12,19 @@
     <link rel="icon" type="image/png" sizes="16x16" href="../../favicon/favicon-16x16.png">
     <link rel="manifest" href="../../favicon/site.webmanifest">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../../styles.css">
-    <link rel="stylesheet" href="../styles.css">
-
+    <link rel="stylesheet" href="../../css/defs.css">
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="../../css/main-desktop.css">
+    <link rel="stylesheet" href="../../css/projects.css">
+    <link rel="stylesheet" href="../../css/projects-desktop.css">
 </head>
 
 <body>
     <div class="menu">
         <p><a class="button" href="../../">(back)</a></p>
     </div>
-    <div id="project-info">
-        <p class="name">Artifact</p>
-        <p class="label">made with</p>
-        <p>JavaScript,<br>OpenAI API,<br>RAG,<br>vector<br>embeddings</p>
-        <p class="label">date</p>
-        <p>Nov 2024</p>
+    <div class="project-name">
+        <p>Artifact</p>
     </div>
     <a href="https://arti-fact.deno.dev/" target="_blank">
         <div class="demo-button">link to prototype</div>
@@ -36,9 +34,24 @@
         <div class="slide column video">
             <div class="video"><video src="videos/multiple.mp4" muted controls autoplay loop></div>
 
-            <div class="text">
-                <p>A platform that matches an uploaded artwork to similar artworks in museum collections, leveraging
-                    OpenAI Vision and a RAG model.</p>
+            <div class="text bottom main">
+                <div class="title">
+                    <p class="header">Artifact</p>
+                    <div class="info">
+                        <div>
+                            <p class="label">made with</p>
+                            <p>JavaScript, OpenAI API, RAG, vector embeddings</p>
+                        </div>
+                        <div>
+                            <p class="label">date</p>
+                            <p>November 2024</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="desc">
+                    <p>A platform that matches an uploaded artwork to similar artworks in museum collections, leveraging
+                        OpenAI Vision and a RAG model.</p>
+                </div>
             </div>
         </div>
 

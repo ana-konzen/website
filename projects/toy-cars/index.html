@@ -12,8 +12,12 @@
     <link rel="icon" type="image/png" sizes="16x16" href="../../favicon/favicon-16x16.png">
     <link rel="manifest" href="../../favicon/site.webmanifest">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../../styles.css">
-    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../../css/defs.css">
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="../../css/main-desktop.css">
+    <link rel="stylesheet" href="../../css/projects.css">
+    <link rel="stylesheet" href="../../css/projects-desktop.css">
+    <link rel="stylesheet" href="style.css">
 
 </head>
 
@@ -21,34 +25,46 @@
     <div class="menu">
         <p><a class="button" href="../../">(back)</a></p>
     </div>
-    <div id="project-info">
-        <p class="name">Toy Cars</p>
-        <p class="label">type</p>
-        <p>interactive<br>editorial illustration</p>
-        <p class="label">made with</p>
-        <p>p5.js</p>
-        <p class="label">date</p>
-        <p>Mar 2024</p>
+    <div class="project-name">
+        <p>Toy Cars</p>
     </div>
     <a href="./article/index.html" target="_blank">
         <div class="demo-button">link to article</div>
     </a>
 
     <div class="slideCont">
-        <div class="slide row video">
-            <div class="text">
-                <p>An editorial illustration for a Washington Post article that analyzes the contrasting paths of
-                    economic growth through the "Made in..." label on the bottom of toy cars. In my illustration, rows
-                    of moving grayscale toy
-                    cars represent the forward momentum of global economies, while a single red car struggles to
-                    progress.</p>
-            </div>
+        <div class="slide column video" id="cars-main">
             <div class="video fit">
                 <video src="videos/main.mp4" loop muted autoplay>
             </div>
+            <div class="text bottom main">
+                <div class="title">
+                    <p class="header">toy cars</p>
+                    <div class="info">
+                        <div>
+                            <p class="label">type</p>
+                            <p>interactive editorial<br>illustration</p>
+                        </div>
+                        <div>
+                            <p class="label">made with</p>
+                            <p>p5.js</p>
+                        </div>
+                        <div>
+                            <p class="label">date</p>
+                            <p>March 2024</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="desc">
+                    <p>An editorial illustration for a Washington Post article that analyzes the contrasting paths of
+                        economic growth through the "Made in..." label on the bottom of toy cars. In my illustration,
+                        rows
+                        of moving grayscale toy
+                        cars represent the forward momentum of global economies, while a single red car struggles to
+                        progress.</p>
+                </div>
+            </div>
         </div>
-
-
         <div class="slide row">
             <div class="text">
                 <p class="header">the article</p>
