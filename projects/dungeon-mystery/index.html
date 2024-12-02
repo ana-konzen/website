@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Ana Konzen | Reclaiming Klein</title>
+    <meta name="description" content="">
+    <link rel="icon" type="image/x-icon" href="../../favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../css/defs.css">
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="../../css/main-desktop.css">
+    <link rel="stylesheet" href="../../css/projects.css">
+    <link rel="stylesheet" href="../../css/projects-desktop.css">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div class="menu">
+        <p><a class="button" href="../../">(back)</a></p>
+    </div>
+    <div class="project-name">
+        <p>Dungeon Mystery</p>
+    </div>
+
+
+    <div class="slideCont">
+        <div id="dungeon" class="slide video dark column">
+            <div class="video">
+                <video src="videos/main.mp4" loop muted autoplay>
+            </div>
+            <div class="text bottom main">
+                <div class="title">
+                    <p class="header">Dungeon Mystery</p>
+                    <div class="info">
+                        <div>
+                            <p class="label">type</p>
+                            <p>game design</p>
+                        </div>
+                        <div>
+                            <p class="label">made with</p>
+                            <p>JavaScript, OpenAI API, Deno</p>
+                        </div>
+                        <div>
+                            <p class="label">date</p>
+                            <p>October 2024</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="desc">
+                    <p>An ode to the original Rogue, Dungeon Mystery is an AI-driven terminal game that offers a
+                        completely new story and characters each time the game is played.</p>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="slide row">
+            <div class="images">
+                <div class="schema"><img src="images/one.png"></div>
+            </div>
+            <div class="text">
+                <p class="header">the original rogue</p>
+                <p>Published in 1980, Rogue is a dungeon-crawling video game. It differed itself from its contemporaries
+                    by being
+                    completely procedurally generated: no game is ever the same.</p>
+            </div>
+
+        </div>
+
+        <div class="slide dark row video">
+            <div class="video">
+                <video src="videos/game-start.mp4" loop muted>
+            </div>
+            <div class="text">
+                <p class="header">the ultimate rogue-like?</p>
+                <p>I took Rogue’s original idea and amplified it by creating a terminal game that’s completely
+                    automatically generated.
+                    Nothing except its overall structure and design is ever the same.</p>
+                <br><br>
+                <p class="header">blend of aesthetics</p>
+                <p>Although Dungeon Mystery uses cutting-edge technology, the design of it intentionally (and somewhat
+                    ironically) mimics the aesthetic of 80s terminal games and the original Rogue.
+                </p>
+
+            </div>
+
+        </div>
+        <div class="slide dark row video">
+            <div class="video">
+                <video src="videos/game-start.mp4" loop muted>
+            </div>
+            <div class="text">
+                <p class="header">the game</p>
+                <p>Dungeon Mystery follows a very simple structure: there are five chambers in the dungeon, each of them
+                    with one character
+                    and a locked door to the next chamber. The player must interact with the character—who has a
+                    specific mission for the
+                    player, be it a riddle or a question about what the player has learned so far—to gain their trust.
+                    Once the character’s
+                    trust is gained, the door to the next room is unlocked.</p>
+            </div>
+        </div>
+        <div class="slide row video">
+            <div class="video">
+                <video src="videos/game-start.mp4" loop muted>
+            </div>
+            <div class="text">
+                <p class="header">code structure</p>
+                <p>When a new game is loaded, ChatGPT will create the structure for the game through a structured output
+                    where it describes
+                    the game’s overall plot as well as details about each character.
+                    Every character has access to the basic information about the game and themselves, as well as a chat
+                    history.
+                    I leveraged ChatGPT’s Function calling capabilities to implement the trust score feature: every time
+                    the player answers
+                    something, the AI will decide whether the trust level increased, decreased, or remained the same—and
+                    call the
+                    appropriate function.</p>
+            </div>
+        </div>
+        <div class="slide row video">
+            <div class="video">
+                <video src="videos/game-start.mp4" loop muted>
+            </div>
+            <div class="text">
+                <p class="header">walkthrough</p>
+                <p>This is an example playthrough of the game. To play it yourself, feel free to clone my repo on
+                    GitHub!
+                    <br> <br>note: this was playtested only in the VSCode terminal
+                    <br>note 2: you will need to set up an env environment with an OpenAI key. Instructions are in the
+                    repo.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="scrollBar"></div>
+
+
+    <script src="../projects.js" async defer></script>
+</body>
+
+</html>

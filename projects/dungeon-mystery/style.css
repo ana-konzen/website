@@ -1,0 +1,25 @@
+#dungeon {
+  display: block;
+  position: relative;
+}
+
+#dungeon .video {
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#dungeon .video video {
+  height: 100vh;
+  object-fit: cover;
+}
+
+#dungeon .text {
+  position: absolute;
+  bottom: 0px;
+  width: 100vw;
+}

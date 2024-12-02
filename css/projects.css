@@ -413,7 +413,7 @@ div.demo-button:hover {
   height: 6px;
   border-radius: 50%;
   transition: background-color var(--transition), width var(--transition), height var(--transition);
-  background-color: var(--info-color);
+  background-color: var(--text-color);
 }
 
 .scrollBar .dot:hover::after {
