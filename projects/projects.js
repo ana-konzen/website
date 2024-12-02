@@ -110,14 +110,17 @@ function scrollToSlide(index, behavior = "smooth") {
   });
 
   if (slides[currentSlide].classList.contains("dark")) {
-    document.documentElement.style.setProperty("--slide-background", "var(--black)");
+    document.documentElement.style.setProperty("--info-color", "var(--white)");
     document.documentElement.style.setProperty("--text-color", "var(--white)");
+    document.documentElement.style.setProperty("--slide-background", "var(--black)");
+    document.documentElement.style.setProperty("--button-background", "var(--light-gray)");
     upCursor = "../../cursors/up-white.png";
     downCursor = "../../cursors/down-white.png";
   } else {
     document.documentElement.style.setProperty("--info-color", "var(--black)");
-    document.documentElement.style.setProperty("--slide-background", "var(--white)");
     document.documentElement.style.setProperty("--text-color", "var(--black)");
+    document.documentElement.style.setProperty("--slide-background", "var(--white)");
+    document.documentElement.style.setProperty("--button-background", "var(--dark-gray)");
     upCursor = "../../cursors/up.png";
     downCursor = "../../cursors/down.png";
   }

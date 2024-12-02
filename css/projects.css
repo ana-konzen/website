@@ -1,6 +1,10 @@
 :root {
   --white: white;
   --black: black;
+  --dark-gray: rgba(0, 0, 0, 0.443);
+  --light-gray: rgba(255, 255, 255, 0.356);
+  --button-background: var(--dark-gray);
+  --button-text: var(--white);
   --slide-background: var(--white);
   --text-color: var(--black);
   --info-color: var(--black);
@@ -60,9 +64,9 @@
 div.demo-button {
   font-family: arizona sans;
   position: fixed;
-  color: white;
+  color: var(--button-text);
   display: block;
-  background: rgba(0, 0, 0, 0.443);
+  background: var(--button-background);
   border-radius: 30px;
   text-align: center;
   font-size: 14px;
