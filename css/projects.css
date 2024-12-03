@@ -216,6 +216,18 @@ div.demo-button:hover {
   transition: color var(--transition);
 }
 
+.slide div.text p a {
+  color: var(--text-color);
+  font-weight: 200;
+  text-decoration: underline;
+  text-decoration-thickness: from-font;
+  text-underline-offset: 2px;
+}
+
+.slide div.text p a:hover {
+  font-weight: normal;
+}
+
 .slide div.text .header {
   text-transform: uppercase;
   font-weight: bold;
