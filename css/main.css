@@ -7,75 +7,52 @@ body {
   margin: 0;
 }
 
-#header {
-  position: fixed;
-  top: var(--header-top);
-  left: var(--header-left);
+#main-cont {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  flex-direction: column;
 }
 
-#bio {
-  position: absolute;
-  /* right: 5vw; */
-  left: var(--bio-left);
-  top: var(--bio-top);
-  width: var(--bio-width);
+#main-cont > * {
+  display: flex;
+  box-sizing: border-box;
+  margin: auto;
+  padding: 5%;
+  flex-direction: column;
+  flex: 1;
+}
+
+#left-cont p {
+  overflow-wrap: break-word;
+}
+
+#middle-cont {
+  flex: 4;
+}
+
+#logo {
+  width: 10em;
+  margin-bottom: 2em;
 }
 
 #project-image {
-  position: absolute;
-  width: var(--img-width);
-  height: var(--img-height);
-  bottom: var(--img-bottom);
-  top: var(--img-top);
-  left: var(--img-left);
-  mix-blend-mode: multiply;
-  transform: translateX(-50%);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
   pointer-events: none;
+  margin: auto;
+  width: 100%;
+}
+
+#bio {
+  hyphens: auto;
 }
 
 #project-list {
-  width: var(--list-width);
-  position: absolute;
-  top: var(--list-top);
-  bottom: var(--list-bottom);
-  left: var(--list-left);
-  right: var(--list-right);
   display: none;
-}
-
-.project-item {
-  font-family: arizona sans;
-  cursor: pointer;
-  font-weight: normal;
-  text-transform: uppercase;
-  font-weight: normal;
-  font-size: 14px;
-  margin-bottom: 10px;
-  text-align: left;
-}
-
-.project-item a {
-  color: black;
-  text-decoration: none;
-}
-
-.project-item.active {
-  font-weight: bold;
-}
-
-.project-item:hover {
-  font-weight: bold;
-  text-decoration: underline;
-  text-decoration-thickness: from-font;
-  text-underline-offset: 2px;
 }
 
 p {
   font-family: arizona sans;
-  font-size: 14px;
+  font-size: 0.8em;
   font-weight: 200;
   text-align: left;
   margin: 0;
@@ -94,22 +71,19 @@ p a:hover {
 }
 
 #credit {
-  position: absolute;
-  bottom: var(--credit-bottom);
-  left: var(--credit-left);
   font-family: arizona sans;
-  font-size: 12px;
+  font-size: 0.8em;
   display: none;
 }
 
 #phone-message {
-  display: block;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 1em;
   text-align: center;
-  position: relative;
-  top: var(--message-top);
-  left: 50%;
-  transform: translateX(-50%);
-  width: 80%;
+}
+
+@media only screen and (max-width: 700px) {
+  #main-cont > * {
+    width: 100%;
+  }
 }

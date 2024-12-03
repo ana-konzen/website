@@ -37,7 +37,7 @@
 
 /* mobile first */
 :root {
-  --margin: 5vw;
+  --margin: 5em;
   --img-width: 90vw;
   --img-height: 90vw;
   --img-bottom: auto;

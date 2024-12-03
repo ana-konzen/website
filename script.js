@@ -35,7 +35,7 @@ projectItems.forEach((item) => {
     item.classList.add("active");
     clearInterval(GIFInterval);
     const folderName = item.textContent.toLowerCase().split(" ").join("-");
-    projectImage.style.backgroundImage = `url(./images/${folderName}/hero.gif)`;
+    projectImage.src = `./images/${folderName}/hero.gif`;
   };
   item.onmouseout = () => {
     GIFInterval = setInterval(getGIF, 5000);
@@ -45,7 +45,7 @@ projectItems.forEach((item) => {
 function getGIF() {
   const randomProject = projects[currentGIF];
   const folderName = randomProject.toLowerCase().split(" ").join("-");
-  projectImage.style.backgroundImage = `url(./images/${folderName}/hero.gif)`;
+  projectImage.src = `./images/${folderName}/hero.gif`;
   document.querySelector(".project-item.active")?.classList.remove("active");
   document.querySelector(`.${folderName}`).classList.add("active");
   currentGIF = (currentGIF + 1) % projects.length;
