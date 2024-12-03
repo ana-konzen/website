@@ -294,6 +294,10 @@ div.demo-button:hover {
   max-height: 100%;
 }
 
+.slide.column div.images.fit div img {
+  object-fit: contain;
+}
+
 .slide.row div.images .big {
   flex: 4;
 }
