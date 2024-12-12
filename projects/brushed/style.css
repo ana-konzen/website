@@ -23,3 +23,48 @@
   bottom: 0px;
   width: 100vw;
 }
+
+#comparison {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  /* position: absolute; */
+  z-index: 10;
+  position: relative;
+}
+
+#comparison div.video {
+  height: 50%;
+}
+
+#comparison div.video video {
+  height: 100%;
+  flex: 1;
+}
+
+.talk::after {
+  content: "talk talk, charli xcx and troye sivan";
+  color: rgb(73, 73, 73);
+  position: absolute;
+  font-family: arizona sans;
+  font-size: 0.9em;
+  font-weight: bold;
+  top: 90%;
+  left: 2%;
+  left: 2;
+}
+
+.btb::after {
+  content: "between the bars, elliott smith";
+  color: rgb(73, 73, 73);
+  position: absolute;
+  font-family: arizona sans;
+  font-size: 0.9em;
+  font-weight: bold;
+  top: 90%;
+  left: 2%;
+  left: 2;
+}

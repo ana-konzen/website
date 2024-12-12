@@ -127,7 +127,10 @@ function scrollToSlide(index, behavior = "smooth") {
 
   pauseVideos();
   if (slides[currentSlide].classList.contains("video")) {
-    slides[currentSlide].querySelector("video").play();
+    const slideVideos = slides[currentSlide].querySelectorAll("video");
+    slideVideos.forEach((video) => {
+      video.play();
+    });
   }
 
   if (currentSlide === 0) {
