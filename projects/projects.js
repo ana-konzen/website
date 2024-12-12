@@ -65,15 +65,12 @@ window.addEventListener("resize", () => {
 });
 
 document.addEventListener("visibilitychange", () => {
-  if (document.hidden) pauseVideos();
-  else if (slides[currentSlide].classList.contains("video")) {
-    slides[currentSlide].querySelector("video").play();
+  if (document.hidden) {
+    pauseVideos();
+  } else {
+    playCurrentSlideVideos();
   }
 });
-
-function pauseVideos() {
-  document.querySelectorAll("video").forEach((video) => video.pause());
-}
 
 function scrollUp() {
   if (currentSlide > 0) scrollToSlide(currentSlide - 1);
@@ -126,16 +123,21 @@ function scrollToSlide(index, behavior = "smooth") {
   }
 
   pauseVideos();
-  if (slides[currentSlide].classList.contains("video")) {
-    const slideVideos = slides[currentSlide].querySelectorAll("video");
-    slideVideos.forEach((video) => {
-      video.play();
-    });
-  }
+  playCurrentSlideVideos();
 
   if (currentSlide === 0) {
     infoCont.classList.add("first");
   } else {
     infoCont.classList.remove("first");
+  }
+}
+
+function pauseVideos() {
+  document.querySelectorAll("video").forEach((video) => video.pause());
+}
+
+function playCurrentSlideVideos() {
+  if (slides[currentSlide].classList.contains("video")) {
+    slides[currentSlide].querySelectorAll("video").forEach((video) => video.play());
   }
 }
