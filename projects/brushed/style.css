@@ -44,12 +44,18 @@
 }
 
 #comparison div.video video {
+  cursor: pointer;
   width: 100%;
   flex: 1;
+  transition: opacity 500ms;
+}
+
+#comparison div.video video:hover {
+  opacity: 0.5;
 }
 
 .talk::after {
-  content: "talk talk, charli xcx and troye sivan";
+  content: "Talk talk featuring troye sivan, Charli xcx";
   color: rgb(73, 73, 73);
   position: absolute;
   font-family: arizona sans;
@@ -61,7 +67,7 @@
 }
 
 .btb::after {
-  content: "between the bars, elliott smith";
+  content: "Between the Bars, Elliott Smith";
   color: rgb(73, 73, 73);
   position: absolute;
   font-family: arizona sans;
