@@ -45,7 +45,7 @@
                         </div>
                         <div>
                             <p class="label">made with</p>
-                            <p>JavaScript, OpenAI API,<br>Spotify API, p5.sound</p>
+                            <p>OpenAI API,<br>Genius and LRC LIB API, p5.sound, p5.js, D3.js</p>
                         </div>
                         <div>
                             <p class="label">date</p>
@@ -54,12 +54,63 @@
                     </div>
                 </div>
                 <div class="desc">
-                    <p>A web platform that creates paintings based on songs, leveraging OpenAI for sentiment analysis,
-                        and the Spotify API and
-                        p5.sound for music analysis.</p>
+                    <p>A web platform that creates paintings based on songs, leveraging OpenAI for sentiment analysis
+                        based on the song's lyrics,
+                        and p5.sound for music analysis.</p>
                 </div>
             </div>
 
+        </div>
+        <div class="slide row">
+            <div class="images">
+                <div class="schema"><img src="images/sketch.png"></div>
+            </div>
+            <div class="text">
+                <p class="header">concept</p>
+                <p>Brushed emerged from my wish to combine music with artistic process. I aimed to combine different
+                    aspects of music with natural brush textures to create a data-visualization project that generates a
+                    painting in real time, where art interacts with music.</p>
+            </div>
+        </div>
+        <div class="slide row">
+            <div class="images">
+                <div class="schema"><img src="images/schema.png"></div>
+            </div>
+            <div class="text">
+                <p class="header">process (code)</p>
+                <p>The user submits an audio file of their chosen song, alongside the song's title and artist name. The
+                    data is sent to the Genius and LRC LIB APIs to generate timestamped lyrics. This information is then
+                    submitted to the OpenAI API, which separates the song into 5-10 main sections, each with its own
+                    dataset. </p>
+            </div>
+        </div>
+        <div class="slide row">
+            <div class="images">
+                <div class="schema"><img src="images/pitches.png"></div>
+            </div>
+            <div class="text">
+                <p class="header">process (data visualization)</p>
+                <p>Leveraging p5.sound and the Web Audio API, I mapped each painting into different fields dictated by
+                    different pitches found in the song, creating Voronoi fields with D3.js.</p>
+            </div>
+        </div>
+        <div class="slide row">
+            <div class="images">
+                <div class="schema"><img src="images/brushes.png"></div>
+            </div>
+            <div class="text">
+                <p class="header">process (brush)</p>
+                <p>I created a mini-library with custom brush textures, which were then used to create the
+                    paintings.</p>
+            </div>
+        </div>
+        <div class="slide column">
+            <div class="images">
+                <div class="schema"><img src="images/strokes.png"></div>
+            </div>
+        </div>
+        <div class="slide full">
+            <img src="images/talk.png">
         </div>
         <div class="slide row video" id="talk">
             <div class="video">
@@ -97,7 +148,9 @@
                 <p>Unmute the video to follow along with the song.</p>
             </div>
         </div>
+
     </div>
+
 
     <div class="scrollBar"></div>
 
