@@ -27,21 +27,24 @@
 #comparison {
   display: flex;
   justify-content: center;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  height: 100vh;
   width: 100vw;
+  top: -100px;
   /* position: absolute; */
   z-index: 10;
   position: relative;
 }
 
+.comparison-brushed {
+  background: rgb(230, 230, 230);
+}
 #comparison div.video {
-  height: 50%;
+  width: 50%;
 }
 
 #comparison div.video video {
-  height: 100%;
+  width: 100%;
   flex: 1;
 }
 
@@ -52,9 +55,9 @@
   font-family: arizona sans;
   font-size: 0.9em;
   font-weight: bold;
-  top: 90%;
-  left: 2%;
-  left: 2;
+  top: 100%;
+  width: 100%;
+  text-align: center;
 }
 
 .btb::after {
@@ -64,7 +67,7 @@
   font-family: arizona sans;
   font-size: 0.9em;
   font-weight: bold;
-  top: 90%;
-  left: 2%;
-  left: 2;
+  width: 100%;
+  text-align: center;
+  top: 100%;
 }
